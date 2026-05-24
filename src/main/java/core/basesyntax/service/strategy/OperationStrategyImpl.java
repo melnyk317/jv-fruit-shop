@@ -1,12 +1,11 @@
 package core.basesyntax.service.strategy;
 
-import java.util.Map;
-
 import core.basesyntax.model.Operation;
+import java.util.Map;
 
 public class OperationStrategyImpl implements OperationStrategy {
     private final Map<Operation, OperationHandler> handlers;
-
+    
     public OperationStrategyImpl(Map<Operation, OperationHandler> handlers) {
         this.handlers = handlers;
     }
@@ -15,5 +14,4 @@ public class OperationStrategyImpl implements OperationStrategy {
     public OperationHandler getHandler(Operation operation) {
         return handlers.get(operation);
     }
-    
 }

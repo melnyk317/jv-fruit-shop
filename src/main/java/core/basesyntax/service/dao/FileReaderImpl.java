@@ -1,4 +1,4 @@
-package core.basesyntax.dao;
+package core.basesyntax.service.dao;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -7,7 +7,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class FileReaderImpl implements FileReader {
-
     @Override
     public List<String> read(String path) {
         List<String> lines = new ArrayList<>();
