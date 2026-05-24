@@ -1,10 +1,8 @@
 package core.basesyntax.service;
-
 import core.basesyntax.model.FruitTransaction;
 import core.basesyntax.model.Operation;
 import java.util.ArrayList;
 import java.util.List;
-
 public class DataConverterImpl implements DataConverter {
     @Override
     public List<FruitTransaction> convertToTransaction(List<String> lines) {

@@ -1,8 +1,6 @@
 package core.basesyntax.model;
-
 import java.util.HashMap;
 import java.util.Map;
-
 public enum Operation {
     BALANCE("b"),
     SUPPLY("s"),

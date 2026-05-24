@@ -1,8 +1,6 @@
 package core.basesyntax.service.report;
-
 import core.basesyntax.db.Storage;
 import java.util.Map;
-
 public class ReportGeneratorImpl implements ReportGenerator {
     @Override
     public String getReport() {
