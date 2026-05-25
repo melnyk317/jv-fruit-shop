@@ -7,6 +7,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class DataConverterImpl implements DataConverter {
+    private static final int OPERATION_CODE_INDEX = 0;
+    private static final int FRUIT_INDEX = 1;
+    private static final int QUANTITY_INDEX = 2;
+
     @Override
     public List<FruitTransaction> convertToTransaction(List<String> lines) {
         List<FruitTransaction> result = new ArrayList<>();
@@ -24,16 +28,16 @@ public class DataConverterImpl implements DataConverter {
         if (data.length != 3) {
             throw new RuntimeException("Bad number of data");
         }
-        String operationCode = data[0].trim();
-        String fruit = data[1].trim();
-        String quantityString = data[2].trim();
-        if (operationCode.length() == 0) {
+        String operationCode = data[OPERATION_CODE_INDEX].trim();
+        String fruit = data[FRUIT_INDEX].trim();
+        String quantityString = data[QUANTITY_INDEX].trim();
+        if (operationCode.isBlank()) {
             throw new RuntimeException("Operation isn't provided");
         }
-        if (fruit.length() == 0) {
+        if (fruit.isBlank()) {
             throw new RuntimeException("Fruit isn't provided");
         }
-        if (quantityString.length() == 0) {
+        if (quantityString.isBlank()) {
             throw new RuntimeException("Quantity isn't provided");
         }
         int quantity;
